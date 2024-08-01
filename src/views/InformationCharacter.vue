@@ -10,6 +10,4 @@ import ICharacter from '../interface/modelApi'
 defineOptions({ name: 'InformationCharacter' })
 const route = useRoute()
 console.log(route.params.id)
-
-
 </script>
