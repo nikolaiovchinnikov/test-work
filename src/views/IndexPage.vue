@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
+import CardMini from '../components/CardMini.vue'
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <CardMini/>
   </main>
 </template>

@@ -1,7 +1,7 @@
 {
-  "name": "vue-project",
-  "version": "0.0.0",
-  "private": true,
+  "name": "rick_and_morty",
+  "version": "1.0.0",
+  "private": false,
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -13,6 +13,8 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "ant-design-vue": "^4.2.3",
+    "axios": "^1.7.2",
     "vue": "^3.4.29",
     "vue-router": "^4.3.3"
   },
