@@ -1,8 +1,8 @@
 <template>
   <a-tabs v-model:activeKey="activeKey" @tabClick="(key) => router.push(key)" size="large">
-    <a-tab-pane key="episodes" tab="Эпизоды" />
-    <a-tab-pane key="locations" tab="Локации" />
     <a-tab-pane key="/" tab="Персонажи" />
+    <a-tab-pane key="/episodes" tab="Эпизоды" />
+    <a-tab-pane key="/locations" tab="Локации" />
   </a-tabs>
 </template>
 

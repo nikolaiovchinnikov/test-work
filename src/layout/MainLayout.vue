@@ -1,5 +1,5 @@
 <template>
-  <a-layout class="layout">
+  <a-layout class="layout min-vh-100">
     <a-layout-header>
       <MainHeader />
     </a-layout-header>
@@ -8,6 +8,9 @@
       <router-view />
     </a-layout-content>
 
+    <a-layout-footer>
+     dddddddddd
+    </a-layout-footer>
   </a-layout>
 </template>
 
