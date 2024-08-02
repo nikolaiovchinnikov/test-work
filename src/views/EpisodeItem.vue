@@ -17,11 +17,11 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
 import { onMounted, ref } from 'vue'
-import { IEpisode, ICharacter } from '../interface/modelApi'
+import type { IEpisode, ICharacter } from '../interface/modelApi'
 import api from '../util/axios'
 defineOptions({ name: 'EpisodeItem' })
 const route = useRoute()
-const itemEpisode = ref<IEpisode>({})
+const itemEpisode = ref<IEpisode>({} as IEpisode)
 const character = ref<ICharacter[]>([])
 
 const getCharacterMultiplay = async (param: string) => {
@@ -37,7 +37,7 @@ const getEpisodeItem = async () => {
 
 onMounted(async () => {
   const charactersUrl = await getEpisodeItem()
-  const charactersId = String(charactersUrl.map((url) => url.match(/[^/]+$/)[0]))
+  const charactersId = String(charactersUrl.map((url) => String(url.match(/[^/]+$/))))
   getCharacterMultiplay(charactersId)
 })
 

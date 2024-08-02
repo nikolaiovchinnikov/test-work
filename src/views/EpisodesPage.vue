@@ -1,7 +1,12 @@
 <template>
-  <a-flex justify="center" class="conteiner" aligin="center" >
-    <a-table class="conteiner" :columns="columns" :data-source="episodes" 
-        :customRow="rowCastomEvent" :pagination="false">
+  <a-flex justify="center" class="conteiner" aligin="center">
+    <a-table
+      class="conteiner"
+      :columns="columns"
+      :data-source="episodes"
+      :customRow="rowCastomEvent"
+      :pagination="false"
+    >
     </a-table>
   </a-flex>
 </template>
@@ -10,12 +15,11 @@
 import { ref, onMounted } from 'vue'
 import api from '../util/axios'
 import { useRouter } from 'vue-router'
+import type { IEpisode } from '@/interface/modelApi'
 defineOptions({ name: 'EpisodesPage' })
+
 const router = useRouter()
-
-
-const episodes = ref([])
-
+const episodes = ref<IEpisode[]>([])
 
 const columns = [
   {
@@ -35,26 +39,21 @@ const columns = [
   }
 ]
 
-
-const rowCastomEvent = (record) => {
-    return {
-      onClick: event => router.push(`episodes/${record.id}`),
-    }
+const rowCastomEvent = (record: IEpisode) => {
+  return {
+    onClick: () => router.push(`episodes/${record.id}`)
+  }
 }
-
 
 const getEpisodes = async () => {
-  const responseEpisodes = await api.get('episode')
+  const responseEpisodes = await api.get<{ results: IEpisode[] }>('episode')
   episodes.value = responseEpisodes.data.results
 }
-
 
 onMounted(() => {
   getEpisodes()
 })
-
 </script>
-
 
 <style lang="css">
 .conteiner {

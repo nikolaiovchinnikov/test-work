@@ -1,5 +1,5 @@
 <template>
-  <a-tabs v-model:activeKey="activeKey" @tabClick="(key) => router.push(key)" size="large">
+  <a-tabs v-model:activeKey="activeKey" @tabClick="(key: string) => router.push(key)" size="large">
     <a-tab-pane key="/" tab="Персонажи" />
     <a-tab-pane key="/episodes" tab="Эпизоды" />
     <a-tab-pane key="/locations" tab="Локации" />
@@ -14,5 +14,4 @@ defineOptions({ name: 'MainHeader' })
 const route = useRoute()
 const router = useRouter()
 const activeKey = ref(route.path)
-
 </script>
