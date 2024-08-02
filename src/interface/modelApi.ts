@@ -22,6 +22,9 @@ export interface ICharacter extends IGeneral {
 }
 
 export interface IEpisode extends IGeneral {
-    dimension: string
-    residents: string[]
+    episode: string
+    characters: string[]
+    air_date: string
 }
+
+

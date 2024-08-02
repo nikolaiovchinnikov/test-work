@@ -17,6 +17,16 @@ const router = createRouter({
           path: 'character/:id',
           name: 'character',
           component: () => import('../views/InformationCharacter.vue')
+        },
+        {
+          path: 'episodes',
+          name: 'episodes',
+          component: () => import('../views/EpisodesPage.vue')
+        },
+        {
+          path: 'episodes/:id',
+          name: 'episodeItem',
+          component: () => import('../views/EpisodeItem.vue')
         }
       ]
     }
