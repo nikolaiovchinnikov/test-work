@@ -1,18 +1,27 @@
+interface IGeneral {
+    id: number
+    name: string
+    url: string
+    created: string
+    type: string
+}
+
 interface INameUrl {
     name: string
     url: string
 }
 
-export interface ICharacter {
+export interface ICharacter extends IGeneral {
     image: string
-    id: number
-    created: string
     episode: string[]
     gender: string
     location: INameUrl
     origin: INameUrl
     species: string
     status: string
-    type: string
-    url: string
+}
+
+export interface IEpisode extends IGeneral {
+    dimension: string
+    residents: string[]
 }
