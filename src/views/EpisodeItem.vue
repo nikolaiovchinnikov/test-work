@@ -1,5 +1,3 @@
-<!-- При клике на эпизод должна открываться страница с подробной информацией (название, дата выхода, список персонажей, участвующих в эпизоде). -->
-
 <template>
   <a-flex justify="center" aligin="center" wrap="flex-wrap" class="conteiner">
     <a-card :title="itemEpisode.name" :bodyStyle="styleBodyCard">

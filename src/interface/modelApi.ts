@@ -27,4 +27,8 @@ export interface IEpisode extends IGeneral {
     air_date: string
 }
 
+export interface Ilocation extends IGeneral {
+    dimension: string 
+    residents: string[]
+}
 
