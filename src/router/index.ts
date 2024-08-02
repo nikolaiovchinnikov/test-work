@@ -14,8 +14,8 @@ const router = createRouter({
           component: () => import('../views/IndexPage.vue')
         },
         {
-          path: 'person/:id',
-          name: 'person',
+          path: 'character/:id',
+          name: 'character',
           component: () => import('../views/InformationCharacter.vue')
         }
       ]

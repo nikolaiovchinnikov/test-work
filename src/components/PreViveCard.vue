@@ -1,5 +1,5 @@
 <template>
-  <a-card hoverable @click="() => router.push(`person/${props.item.id}`)">
+  <a-card hoverable @click="() => router.push(`character/${props.item.id}`)">
     <template #cover>
       <img alt="example" :src="props.item.image"/>
     </template>
