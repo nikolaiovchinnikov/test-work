@@ -1,6 +1,6 @@
 <template>
   <a-layout class="layout min-vh-100">
-    <a-layout-header>
+    <a-layout-header style="background-color: #FFFED3;">
       <MainHeader />
     </a-layout-header>
 
@@ -8,7 +8,7 @@
       <router-view />
     </a-layout-content>
 
-    <a-layout-footer> dddddddddd </a-layout-footer>
+    <a-layout-footer></a-layout-footer>
   </a-layout>
 </template>
 
