@@ -43,3 +43,11 @@ export interface IResultsCharacter {
     info: IData
     results: ICharacter[]
 }
+export interface IResultslocation  {
+    info: IData
+    results: Ilocation[]
+}
+export interface IResultsEpisode  {
+    info: IData
+    results: IEpisode[]
+}

@@ -3,23 +3,25 @@
     <a-table
       class="conteiner"
       :columns="columns"
-      :data-source="episodes"
+      :data-source="dataEpisode.results"
       :customRow="rowCastomEvent"
       :pagination="false"
     >
     </a-table>
   </a-flex>
+  <PaginationBlock v-if="dataEpisode.info" :total="dataEpisode.info.count" :change="getEpisodes" />
 </template>
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import api from '../util/axios'
 import { useRouter } from 'vue-router'
-import type { IEpisode } from '@/interface/modelApi'
+import type { IEpisode, IResultsEpisode } from '@/interface/modelApi'
+import PaginationBlock from '@/components/PaginationBlock.vue'
 defineOptions({ name: 'EpisodesPage' })
 
+const dataEpisode = ref<IResultsEpisode>({} as IResultsEpisode)
 const router = useRouter()
-const episodes = ref<IEpisode[]>([])
 
 const columns = [
   {
@@ -45,9 +47,10 @@ const rowCastomEvent = (record: IEpisode) => {
   }
 }
 
-const getEpisodes = async () => {
-  const responseEpisodes = await api.get<{ results: IEpisode[] }>('episode')
-  episodes.value = responseEpisodes.data.results
+const getEpisodes = async (page?: number) => {
+  const pathDefault = page ? `episode/?page=${page}` : 'episode'
+  const responseEpisodes = await api.get<IResultsEpisode>(pathDefault)
+  dataEpisode.value = responseEpisodes.data
 }
 
 onMounted(() => {
