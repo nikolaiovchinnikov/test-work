@@ -2,8 +2,12 @@
   <a-flex justify="center" aligin="center" wrap="flex-wrap" class="conteiner">
     <a-card style="width: 80%" :title="itemlocation.name" :bodyStyle="styleBodyCard">
       <template #extra>
-        {{ itemlocation.dimension }}
-        {{ itemlocation.type }}
+        <div>
+          Тип: {{ itemlocation.type }}
+        </div>
+        <div>
+          Измерение: {{ itemlocation.dimension }}
+        </div>
       </template>
       <div
         v-for="(item, index) in character"
