@@ -1,17 +1,19 @@
 <template>
   <a-tabs v-model:activeKey="activeKey" @tabClick="(key: string) => router.push(key)" size="large">
-    <a-tab-pane key="/" tab="Персонажи" />
-    <a-tab-pane key="/episodes" tab="Эпизоды" />
-    <a-tab-pane key="/locations" tab="Локации" />
+    <a-tab-pane key="/" :tab="t('characters')" />
+    <a-tab-pane key="/episodes" :tab="t('episodes')" />
+    <a-tab-pane key="/locations" :tab="t('location')" />
   </a-tabs>
+
+  <LanguageSwitcher />
 </template>
-
-<script setup lang="ts">
+<script lang="ts" setup>
 import { ref } from 'vue'
-import { useRouter, useRoute } from 'vue-router'
-defineOptions({ name: 'MainHeader' })
-
-const route = useRoute()
+import LanguageSwitcher from '@/components/LanguageSwitcher.vue'
+import { useRoute, useRouter } from 'vue-router'
+import useLanguage from '@/hooks/useLanguage'
 const router = useRouter()
+const route = useRoute()
 const activeKey = ref(route.path)
+const { t } = useLanguage()
 </script>

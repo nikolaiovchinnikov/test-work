@@ -1,6 +1,9 @@
 <template>
   <a-layout class="layout min-vh-100">
-    <a-layout-header style="background-color: #FFFED3;">
+    <a-layout-header
+      class="d-flex justify-content-between align-items-center"
+      style="background-color: #fffed3"
+    >
       <MainHeader />
     </a-layout-header>
 
