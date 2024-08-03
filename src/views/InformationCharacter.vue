@@ -1,6 +1,6 @@
 <template>
   <a-flex justify="center" aligin="center" wrap="flex-wrap" class="conteiner">
-    <a-card :title="itemCharacter.name" :bodyStyle="styleBodyCard">
+    <a-card style="width: 70%;" :title="itemCharacter.name" :bodyStyle="styleBodyCard">
       <template #extra> <a-image width="40px" :src="itemCharacter.image" /></template>
       <a-card size="small" title="Пол">
         <template #extra>
@@ -22,7 +22,7 @@
           {{ itemCharacter.type }}
         </template>
       </a-card>
-      <a-card-meta :title="itemCharacter.created" description="This is the description" />
+      <a-card-meta :title="`Дата создания : ${parseDate(itemCharacter.created)}`" />
     </a-card>
     <img class="display_none" :src="itemCharacter.image" />
   </a-flex>
@@ -31,8 +31,9 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
 import { onMounted, ref } from 'vue'
-import type { ICharacter } from '../interface/modelApi'
-import api from '../util/axios'
+import type { ICharacter } from '@/interface/modelApi'
+import api from '@/util/axios'
+import { parseDate } from '@/util/dateHangler'
 defineOptions({ name: 'InformationCharacter' })
 const route = useRoute()
 
