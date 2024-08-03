@@ -1,3 +1,10 @@
+export interface IData {
+    count: number
+    next: string
+    page: number
+    prev: string
+}
+
 interface IGeneral {
     id: number
     name: string
@@ -32,3 +39,7 @@ export interface Ilocation extends IGeneral {
     residents: string[]
 }
 
+export interface IResultsCharacter {
+    info: IData
+    results: ICharacter[]
+}
