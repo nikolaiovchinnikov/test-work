@@ -1,18 +1,16 @@
-# vue-project
 
-This template should help get you started developing with Vue 3 in Vite.
+# Vue 3 + Vite Project Rick and Morty
 
-## Recommended IDE Setup
+Этот шаблон поможет вам начать а так же поддерживать разработку с Vue 3 в Vite.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Рекомендуемая настройка IDE
 
-## Type Support for `.vue` Imports in TS
+- **VSCode** + **Volar** (и отключите Vetur).
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+## Поддержка типов для импорта `.vue` в TypeScript
 
-## Customize configuration
+TypeScript не может обрабатывать информацию о типах для импорта `.vue` по умолчанию, поэтому мы заменяем CLI `tsc` на `vue-tsc` для проверки типов. В редакторах нам нужен Volar, чтобы сделать службу языка TypeScript осведомленной о типах `.vue`.
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
 
 ## Project Setup
 
@@ -20,20 +18,50 @@ See [Vite Configuration Reference](https://vitejs.dev/config/).
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### Запускает сервер разработки Vite.
 
 ```sh
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+### Запускает проверку типов и сборку проекта.
 
 ```sh
 npm run build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+### Запускает ESLint для проверки и исправления кода, игнорируя файлы, указанные в .gitignore.
 
 ```sh
 npm run lint
+```
+
+### Запускает юнит-тесты с использованием Vitest.
+
+```sh
+npm run test:unit
+```
+
+### Выполняет сборку проекта с использованием Vite.
+
+```sh
+npm run build-only
+```
+
+### Форматирует файлы в папке src с использованием Prettier.
+
+```sh
+npm run format
+```
+
+### Запускает предварительный просмотр собранного проекта с использованием Vite.
+
+```sh
+npm run preview
+```
+
+### Выполняет проверку типов с использованием Vue TypeScript Compiler.
+
+```sh
+npm run type-check
 ```
