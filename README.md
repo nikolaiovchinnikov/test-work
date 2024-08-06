@@ -77,3 +77,9 @@ docker build -t vue-project .
 ```sh
 docker run -p 80:80 vue-project
 ```
+
+### Видео обзор
+
+<video width="320" height="240" controls>
+  <source src="Video.mp4" type="video/mp4">
+</video>
