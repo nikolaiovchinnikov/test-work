@@ -65,3 +65,15 @@ npm run preview
 ```sh
 npm run type-check
 ```
+
+### Запускает сборку докерконтейнера.
+
+```sh
+docker build -t vue-project .
+```
+
+### Запускает докер контейнер.
+
+```sh
+docker run -p 80:80 vue-project
+```
