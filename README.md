@@ -80,3 +80,15 @@ docker run -p 80:80 vue-project
 
 ### Видео обзор
 
+1 часть
+
+https://github.com/user-attachments/assets/c1ab4847-5da0-4d32-9999-75d749472217
+
+2 часть
+
+https://github.com/user-attachments/assets/1db908e8-d80e-4a1b-b015-e34dfd11849e
+
+3 часть
+
+https://github.com/user-attachments/assets/3e10e194-36a6-4e7e-8d8c-c013a0dd0cf0
+
